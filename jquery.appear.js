@@ -70,9 +70,9 @@
       leftOffset = ($window.height()/100) * parseInt(leftOffset) 
 
     if (top + $element.height() >= window_top &&
-        top - ($element.data('appear-top-offset') || 0) <= window_top + $window.height() &&
+        top - (topOffset || 0) <= window_top + $window.height() &&
         left + $element.width() >= window_left &&
-        left - ($element.data('appear-left-offset') || 0) <= window_left + $window.width()) {
+        left - (leftOffset || 0) <= window_left + $window.width()) {
       return true;
     } else {
       return false;
