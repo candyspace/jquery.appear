@@ -60,6 +60,9 @@
     var left = offset.left;
     var top = offset.top;
     
+    var topOffset = $element.data('appear-top-offset');
+    var leftOffset = $element.data('appear-left-offset');
+    
     if(typeof topOffset === 'string' && topOffset.match('%'))
       topOffset = ($window.height()/100) * parseInt(topOffset) 
 
