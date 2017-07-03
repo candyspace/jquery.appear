@@ -59,6 +59,12 @@
     var offset = $element.offset();
     var left = offset.left;
     var top = offset.top;
+    
+    if(typeof topOffset === 'string' && topOffset.match('%'))
+      topOffset = ($window.height()/100) * parseInt(topOffset) 
+
+    if(typeof leftOffset === 'string' && leftOffset.match('%'))
+      leftOffset = ($window.height()/100) * parseInt(leftOffset) 
 
     if (top + $element.height() >= window_top &&
         top - ($element.data('appear-top-offset') || 0) <= window_top + $window.height() &&
